@@ -303,6 +303,11 @@
                 var url = window.location.href;
                 var page = url.substring(url.lastIndexOf("/")+1);
                 var urlPage = 'http://' + document.domain + '/' + settings.pagePrefix + id + '/' + page;
+
+                if (id === "en"){
+                    var urlPage = 'http://' + document.domain + '/' + page;
+                }
+
                 liElement = $("<li><a id=\"" + id + "\" href=\"" + urlPage + "\">" + text + "</a></li>");
             } else {
                 var href = document.URL.replace('#', '');
